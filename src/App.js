@@ -1,12 +1,20 @@
 import React from 'react'
 import logo from './logo.svg';
 import './App.css';
-
+import styled from "styled-components"
 
 
 export const App = (props) => {
+const DivOne = styled.div`
+  background-color: lightgreen;
+  color:black;
+  @media screen and (max-width:600px){
+    background-color: #282c34;
+  }
+`
+
   return(
-    <div className="App">
+    <DivOne className="App">
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
       <p>
@@ -21,6 +29,6 @@ export const App = (props) => {
         Learn React
       </a>
     </header>
-  </div>
+  </DivOne>
   )
 }
