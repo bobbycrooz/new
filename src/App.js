@@ -1,34 +1,57 @@
-import React from 'react'
+import React, {Component, useContext } from 'react'
 import logo from './logo.svg';
 import './App.css';
 import styled from "styled-components"
+import {Pane} from './components/mainpane/mainpane'
+import { namectx } from "./context"
 
 
-export const App = (props) => {
 const DivOne = styled.div`
-  background-color: lightgreen;
-  color:black;
-  @media screen and (max-width:600px){
-    background-color: #282c34;
-  }
+background-color: lightgreen;
+color:black;
+@media screen and (max-width:600px){
+  background-color: #282c34;
+}
 `
 
-  return(
-    <DivOne className="App">
+export class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      name: "bobby"
+    }
+    // this.clickHandler = this.clickHandler.bind(this)
+  }
+
+  clickHandler = (e) =>{
+    e.preventDefault();
+    this.setState({name: "Shola"})
+  }
+
+  render (){
+    return (
+      <DivOne className="App">
     <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
+     
+     <Pane title="Bobby's component 1" close={this.clickHandler}/>
       <p>
-        Edit <code>src/App.js</code> and save to reload.
+        {this.props.title} {this.state.name}
       </p>
       <a
         className="App-link"
-        href="https://reactjs.org"
+        href="https://reactjs.org" 
         target="_blank"
         rel="noopener noreferrer"
+        onClick={this.clickHandler}
       >
-        Learn React
+        unknown
       </a>
     </header>
   </DivOne>
-  )
+    )
+    
+  }
 }
+
+
+

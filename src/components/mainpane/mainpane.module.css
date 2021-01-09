@@ -1,0 +1,44 @@
+.Pane{
+    background-color: rgb(245, 224, 224);
+    color: black;
+    width: 400px;
+    height: 300px;
+}
+
+.Head{
+    height: 30px;
+    background-color: rgb(245, 224, 224);
+    box-shadow: 0px 2px 14px -9px rgb(116, 116, 116);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Controls{
+    display: flex;
+    flex-direction: row;
+ 
+}
+.Controls_item{
+    padding: 3px;
+    margin: 2px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+
+}
+.Controls_red:hover{
+    background-color: rgb(235, 75, 75);
+    color: #ffffff;
+}
+
+.Controls_grey:hover{
+    background-color: rgb(139, 139, 139);
+    color: #ffffff;
+}
+
+.Controls_green:hover{
+    background-color: rgb(2, 206, 19);
+    color: #ffffff;
+}
