@@ -1,16 +1,16 @@
-import React, {Component, useContext } from 'react'
+import React, {Component } from 'react'
 import logo from './logo.svg';
 import './App.css';
 import styled from "styled-components"
 import {Pane} from './components/mainpane/mainpane'
-import { namectx } from "./context"
+
 
 
 const DivOne = styled.div`
-background-color: lightgreen;
+background-color: #264653;
 color:black;
 @media screen and (max-width:600px){
-  background-color: #282c34;
+  background-color: #264653;
 }
 `
 
@@ -24,8 +24,10 @@ export class App extends Component {
   }
 
   clickHandler = (e) =>{
-    e.preventDefault();
-    this.setState({name: "Shola"})
+    
+    
+    this.state.name === "Shola" ? this.setState({name: 'bobby'}) : this.setState({name: "Shola"})
+
   }
 
   render (){

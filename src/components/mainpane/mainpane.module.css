@@ -2,7 +2,8 @@
     background-color: rgb(245, 224, 224);
     color: black;
     width: 400px;
-    height: 300px;
+    height: auto;
+    margin: 30px;
 }
 
 .Head{

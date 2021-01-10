@@ -2,13 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom';
 
 import {App} from './App';
-import NameContext from "./context";
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <NameContext>
+    
       <App />
-    </NameContext>
+  
   </React.StrictMode>,
   document.getElementById('root')
 );
